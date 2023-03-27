@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		BD8390DD29D20E5000D11DBF /* TheWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390DC29D20E5000D11DBF /* TheWeatherApp.swift */; };
-		BD8390DF29D20E5000D11DBF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390DE29D20E5000D11DBF /* ContentView.swift */; };
+		BD8390DF29D20E5000D11DBF /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390DE29D20E5000D11DBF /* MainView.swift */; };
 		BD8390E129D20E5300D11DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8390E029D20E5300D11DBF /* Assets.xcassets */; };
 		BD8390E429D20E5300D11DBF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD8390E329D20E5300D11DBF /* Preview Assets.xcassets */; };
+		BD8390EE29D22EC200D11DBF /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390ED29D22EC200D11DBF /* WeatherResponse.swift */; };
+		BD8390F029D2319800D11DBF /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390EF29D2319800D11DBF /* WeatherViewModel.swift */; };
+		BD8390F529D2415600D11DBF /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390F429D2415600D11DBF /* WeatherModel.swift */; };
+		BD8390F729D2569700D11DBF /* WeatherModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390F629D2569700D11DBF /* WeatherModelMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD8390D929D20E5000D11DBF /* TheWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD8390DC29D20E5000D11DBF /* TheWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheWeatherApp.swift; sourceTree = "<group>"; };
-		BD8390DE29D20E5000D11DBF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BD8390DE29D20E5000D11DBF /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BD8390E029D20E5300D11DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD8390E329D20E5300D11DBF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD8390ED29D22EC200D11DBF /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		BD8390EF29D2319800D11DBF /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		BD8390F129D2346C00D11DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BD8390F429D2415600D11DBF /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		BD8390F629D2569700D11DBF /* WeatherModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +60,11 @@
 		BD8390DB29D20E5000D11DBF /* TheWeather */ = {
 			isa = PBXGroup;
 			children = (
+				BD8390F129D2346C00D11DBF /* Info.plist */,
+				BD8390EB29D2206500D11DBF /* ViewModels */,
+				BD8390EA29D2206000D11DBF /* Models */,
 				BD8390DC29D20E5000D11DBF /* TheWeatherApp.swift */,
-				BD8390DE29D20E5000D11DBF /* ContentView.swift */,
+				BD8390EC29D2207100D11DBF /* Views */,
 				BD8390E029D20E5300D11DBF /* Assets.xcassets */,
 				BD8390E229D20E5300D11DBF /* Preview Content */,
 			);
@@ -65,6 +77,32 @@
 				BD8390E329D20E5300D11DBF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD8390EA29D2206000D11DBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD8390ED29D22EC200D11DBF /* WeatherResponse.swift */,
+				BD8390F429D2415600D11DBF /* WeatherModel.swift */,
+				BD8390F629D2569700D11DBF /* WeatherModelMapper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD8390EB29D2206500D11DBF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD8390EF29D2319800D11DBF /* WeatherViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BD8390EC29D2207100D11DBF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD8390DE29D20E5000D11DBF /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD8390DF29D20E5000D11DBF /* ContentView.swift in Sources */,
+				BD8390DF29D20E5000D11DBF /* MainView.swift in Sources */,
+				BD8390F029D2319800D11DBF /* WeatherViewModel.swift in Sources */,
+				BD8390EE29D22EC200D11DBF /* WeatherResponse.swift in Sources */,
 				BD8390DD29D20E5000D11DBF /* TheWeatherApp.swift in Sources */,
+				BD8390F529D2415600D11DBF /* WeatherModel.swift in Sources */,
+				BD8390F729D2569700D11DBF /* WeatherModelMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +311,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TheWeather/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheWeather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +340,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TheWeather/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheWeather/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
