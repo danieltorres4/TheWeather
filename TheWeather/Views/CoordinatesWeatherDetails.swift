@@ -19,17 +19,22 @@ struct CoordinatesWeatherDetails: View {
                 VStack {
                     HStack {
                         TextField("Latitude", text: $latitude)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
+                            .textFieldStyle(.roundedBorder)
                         
                         TextField("Longitude", text: $longitude)
-                            .foregroundColor(.white)
+                            .foregroundColor(.black)
+                            .textFieldStyle(.roundedBorder)
                         
                         Button("Search") {
                             Task {
                                 await weatherViewModel.getWeatherInfoGivenCoordinates(latitude: latitude, longitude: longitude)
                             }
                         }
+                        //.padding()
+                        .buttonStyle(.bordered)
                     }
+                    .padding()
                     
                     Text(weatherViewModel.weatherModel.city)
                         .foregroundColor(.white)
