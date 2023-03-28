@@ -15,6 +15,7 @@
 		BD8390F029D2319800D11DBF /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390EF29D2319800D11DBF /* WeatherViewModel.swift */; };
 		BD8390F529D2415600D11DBF /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390F429D2415600D11DBF /* WeatherModel.swift */; };
 		BD8390F729D2569700D11DBF /* WeatherModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390F629D2569700D11DBF /* WeatherModelMapper.swift */; };
+		BD8390F929D2872A00D11DBF /* CityWeatherDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8390F829D2872A00D11DBF /* CityWeatherDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BD8390F129D2346C00D11DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BD8390F429D2415600D11DBF /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		BD8390F629D2569700D11DBF /* WeatherModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelMapper.swift; sourceTree = "<group>"; };
+		BD8390F829D2872A00D11DBF /* CityWeatherDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				BD8390DE29D20E5000D11DBF /* MainView.swift */,
+				BD8390F829D2872A00D11DBF /* CityWeatherDetails.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8390DF29D20E5000D11DBF /* MainView.swift in Sources */,
+				BD8390F929D2872A00D11DBF /* CityWeatherDetails.swift in Sources */,
 				BD8390F029D2319800D11DBF /* WeatherViewModel.swift in Sources */,
 				BD8390EE29D22EC200D11DBF /* WeatherResponse.swift in Sources */,
 				BD8390DD29D20E5000D11DBF /* TheWeatherApp.swift in Sources */,

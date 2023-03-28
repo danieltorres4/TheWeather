@@ -13,7 +13,7 @@ final class WeatherViewModel: ObservableObject {
     
     /// This method will do the HTTP petition to get the weather info of a city (parameter)
     func getWeatherInfo(city: String) async {
-        guard let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=55822766946b065ad07b72bf3f07bc04&units=metric&lang=en") else { return }
+        guard let weatherURL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(city)&appid=55822766946b065ad07b72bf3f07bc04&units=metric&lang=es") else { return }
         
         do {
             /// Petition
