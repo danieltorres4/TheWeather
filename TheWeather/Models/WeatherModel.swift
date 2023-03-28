@@ -19,6 +19,7 @@ struct WeatherModel {
     let sunset: Date
     let sunrise: Date
     let country: String
+    let thermalSensation: String
     
-    static let empty: WeatherModel = .init(city: "No city", weather: "No weather", description: "No description", weatherIcon: nil, temp: "0 º", min: "0 º", max: "0 º", timezone: "0", sunset: .now, sunrise: .now, country: "No country")
+    static let empty: WeatherModel = .init(city: "No city", weather: "No weather", description: "No description", weatherIcon: nil, temp: "0 º", min: "0 º", max: "0 º", timezone: "0", sunset: .now, sunrise: .now, country: "No country", thermalSensation: "No Thermal Sensation")
 }

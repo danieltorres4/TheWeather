@@ -23,6 +23,6 @@ struct WeatherModelMapper {
         
         let country = dataModel.time.country
         
-        return WeatherModel(city: dataModel.city, weather: weather.weather, description: "\(weather.description)", weatherIcon: URL(string: "https://openweathermap.org/img/wn/\(weather.weatherIcon)@2x.png"), temp: "\(Int(temperature.temp)) º", min: "\(Int(temperature.min)) º", max: "\(Int(temperature.max)) º", timezone: "\(Int(dataModel.timezone))", sunset: sunset, sunrise: sunrise, country: country)
+        return WeatherModel(city: dataModel.city, weather: weather.weather, description: "\(weather.description)", weatherIcon: URL(string: "https://openweathermap.org/img/wn/\(weather.weatherIcon)@2x.png"), temp: "\(Int(temperature.temp)) º", min: "\(Int(temperature.min)) º", max: "\(Int(temperature.max)) º", timezone: "\(Int(dataModel.timezone))", sunset: sunset, sunrise: sunrise, country: country, thermalSensation: "\(temperature.thermalSensation) º")
     }
 }

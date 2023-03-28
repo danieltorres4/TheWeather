@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject private var weatherViewModel = WeatherViewModel()
+    @State var cityToSearch = ""
     
     var body: some View {
         ZStack {
@@ -17,6 +18,7 @@ struct MainView: View {
                 Text(weatherViewModel.weatherModel.city)
                     .foregroundColor(.white)
                     .font(.system(size: 70))
+                    .bold()
                 
                 Label(weatherViewModel.weatherModel.country, systemImage: "globe.americas.fill")
                     .symbolRenderingMode(.multicolor)
@@ -43,6 +45,15 @@ struct MainView: View {
                             .foregroundColor(.white)
                 }
                 .padding(.top, -20)
+                
+                VStack {
+                    Text("Thermal Sensation")
+                        .font(.headline)
+                    Label("\(weatherViewModel.weatherModel.thermalSensation)", systemImage: "thermometer.sun.fill")
+                }
+                .foregroundColor(.white)
+                .symbolRenderingMode(.multicolor)
+                .padding()
                 
                 HStack(spacing: 14) {
                     VStack {
@@ -83,6 +94,7 @@ struct MainView: View {
         .task {
             await weatherViewModel.getWeatherInfo(city: "dortmund")
         }
+        //.searchable(text: $cityToSearch)
     }
 }
 
