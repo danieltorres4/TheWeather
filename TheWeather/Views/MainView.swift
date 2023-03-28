@@ -10,7 +10,17 @@ import SwiftUI
 struct MainView: View {
     
     var body: some View {
-        CityWeatherDetails()
+        TabView {
+            CityWeatherDetails()
+                .tabItem {
+                    Label("City", systemImage: "building.2.fill")
+                }
+            
+            CoordinatesWeatherDetails()
+                .tabItem {
+                    Label("Coordinates", systemImage: "map.fill")
+                }
+        }
     }
 }
 

@@ -32,4 +32,21 @@ final class WeatherViewModel: ObservableObject {
         }
     }
     
+    /// This method will do the HTTP petition to get the weather info of a city given its coordinates (longitude and latitude as parameters)
+    func getWeatherInfoGivenCoordinates(latitude: String, longitude: String) async {
+        guard let urlWithCoordinates = URL(string: "https://api.openweathermap.org/data/2.5/weather?lat=\(latitude)&lon=\(longitude)&appid=55822766946b065ad07b72bf3f07bc04&units=metric&lang=es") else { return }
+        
+        do {
+            async let (data, _) = try await URLSession.shared.data(from: urlWithCoordinates)
+            
+            let dataModel = try! await JSONDecoder().decode(WeatherResponse.self, from: data)
+            
+            DispatchQueue.main.async {
+                self.weatherModel = self.weatherModelMapper.mapResponseDataModelToModel(dataModel: dataModel)
+            }
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+    
 }
